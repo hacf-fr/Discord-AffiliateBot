@@ -1,0 +1,40 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Discord AffiliateBot\n"
+"POT-Creation-Date: 2020-11-18 17:46+0100\n"
+"PO-Revision-Date: 2020-11-18 17:46+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.4.2\n"
+"X-Poedit-Basepath: ../../..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: locale\n"
+
+#: DiscordBot.py:32
+msgid "{} has connected to Discord!"
+msgstr "{} has connected to Discord!"
+
+#: DiscordBot.py:41
+msgid "{} affiliate bot is running !"
+msgstr "{} affiliate bot is running !"
+
+#: DiscordBot.py:54
+msgid "Support {} by using this affiliate link :"
+msgid_plural "Support {} by using these affiliate links :"
+msgstr[0] "Support {} by using this affiliate link :"
+msgstr[1] "Support {} by using these affiliate links :"
+
+#: DiscordBot.py:60
+msgid "Replaced {} link in {} channel from {} message on {} server"
+msgid_plural "Replaced {} links in {} channel from {} message on {} server"
+msgstr[0] "Replaced {} link in {} channel from {} message on {} server"
+msgstr[1] "Replaced {} links in {} channel from {} message on {} server"
+
+#: DiscordBot.py:70
+msgid "{} joined guild {}"
+msgstr "{} joined guild {}"
