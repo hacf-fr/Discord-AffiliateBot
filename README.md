@@ -16,7 +16,12 @@ This allows Discords users to contribute to one's community by using these links
 
 ## Installation
 
-Pull the git repository then run :
+From Docker Hub :
+```bash
+docker pull hacffr/discord-affiliatebot
+```
+
+Or by building it locally, pull the git repository then run :
 ```bash
 docker build -t discord-affiliatebot .
 ```
@@ -25,7 +30,7 @@ docker build -t discord-affiliatebot .
 
 Run the application :
 ```bash
-docker run --name discord-affiliatebot discord-affiliatebot
+docker run --name discord-affiliatebot hacffr/discord-affiliatebot
 ```
 
 ## Configuration
@@ -38,12 +43,42 @@ docker run --name discord-affiliatebot \
     -e ALIEXPRESS_TAG="MY_ALIEXPRESS_TAG" \
     -e COMMUNITY="My community" \
     -e LANGUAGE="en_US:en" \
-    discord-affiliatebot
+    hacffr/discord-affiliatebot
 ```
 
 You can also bind a .env file containing these variables to /app/.env :
 ```bash
 docker run --name discord-affiliatebot \ 
     -v sample.env:/app/.env \
-    discord-affiliatebot
+    hacffr/discord-affiliatebot
+```
+
+### Docker-Compose
+
+With environment variables :
+```bash
+version: "3"
+
+services:
+  discord-affiliatebot:
+    container_name: discord-affiliatebot
+    image: hacffr/discord-affiliatebot
+    environment:
+      - DISCORD_TOKEN=MY_TOKEN
+      - AMAZON_TAG=MY_AMAZON_TAG
+      - ALIEXPRESS_TAG=MY_ALIEXPRESS_TAG
+      - COMMUNITY=My community
+      - LANGUAGE=en_US:en
+```
+
+With a .env file containing these variables bound to /app/.env :
+```bash
+version: "3"
+
+services:
+  discord-affiliatebot:
+    container_name: discord-affiliatebot
+    image: hacffr/discord-affiliatebot
+    volumes:
+      - sample.env:/app/.env
 ```

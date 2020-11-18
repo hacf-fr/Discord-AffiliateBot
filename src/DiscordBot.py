@@ -37,7 +37,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content == '!affiliate':
+    if message.content == '!affiliate check':
         await message.channel.send(_('{} affiliate bot is running !').format(COMMUNITY))
         return
 
@@ -51,9 +51,9 @@ async def on_message(message):
             affiliate_links.append(get_amazon_affiliate_link(match))
 
     if affiliate_links:
-        response = traduction.ngettext('Support {} by using this affiliate link :',
-                                       'Support {} by using these affiliate links :',
-                                       len(affiliate_links)).format(COMMUNITY)
+        response = traduction.ngettext('Support {} by using this affiliate link posted by {} :',
+                                       'Support {} by using these affiliate links posted by {} :',
+                                       len(affiliate_links)).format(COMMUNITY, message.author.name)
         for affiliate_link in affiliate_links:
             response += "\n" + affiliate_link
 
@@ -63,6 +63,9 @@ async def on_message(message):
               .format(len(affiliate_links), message.channel.name, message.author.name, message.guild.name))
 
         await message.channel.send(response)
+
+        if message.content.startswith('!affiliate '):
+            await message.delete()
 
 
 @client.event

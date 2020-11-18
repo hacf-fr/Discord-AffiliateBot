@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Discord AffiliateBot\n"
-"POT-Creation-Date: 2020-11-18 17:46+0100\n"
-"PO-Revision-Date: 2020-11-18 17:46+0100\n"
+"POT-Creation-Date: 2020-11-18 21:53+0100\n"
+"PO-Revision-Date: 2020-11-18 21:53+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en\n"
@@ -23,18 +23,18 @@ msgstr "{} has connected to Discord!"
 msgid "{} affiliate bot is running !"
 msgstr "{} affiliate bot is running !"
 
-#: DiscordBot.py:54
-msgid "Support {} by using this affiliate link :"
-msgid_plural "Support {} by using these affiliate links :"
-msgstr[0] "Support {} by using this affiliate link :"
-msgstr[1] "Support {} by using these affiliate links :"
+#: DiscordBot.py:57
+msgid "Support {} by using this affiliate link posted by {} :"
+msgid_plural "Support {} by using these affiliate links posted by {}  :"
+msgstr[0] "Support {} by using this affiliate link posted by {} :"
+msgstr[1] "Support {} by using these affiliate links posted by {} :"
 
-#: DiscordBot.py:60
+#: DiscordBot.py:63
 msgid "Replaced {} link in {} channel from {} message on {} server"
 msgid_plural "Replaced {} links in {} channel from {} message on {} server"
 msgstr[0] "Replaced {} link in {} channel from {} message on {} server"
 msgstr[1] "Replaced {} links in {} channel from {} message on {} server"
 
-#: DiscordBot.py:70
+#: DiscordBot.py:73
 msgid "{} joined guild {}"
 msgstr "{} joined guild {}"
