@@ -29,7 +29,7 @@ client = discord.Client()
 
 @client.event
 async def on_ready():
-    print(_('{} has connected to Discord!').format(client.user.name))
+    print('{} has connected to Discord!'.format(client.user.name))
 
 
 @client.event
@@ -38,12 +38,12 @@ async def on_message(message):
         return
 
     if message.content == '!affiliate check':
-        await message.channel.send(_('{} affiliate bot is running !').format(COMMUNITY))
+        await message.channel.send('{} affiliate bot is running !'.format(COMMUNITY))
         return
 
     affiliate_links = []
 
-    if ALIEXPRESS_REGEX:
+    if ALIEXPRESS_TAG:
         for match in re.findall(ALIEXPRESS_REGEX, message.content):
             affiliate_links.append(get_aliexpress_affiliate_link(
                 match[1] if len(match[1]) > 0 else urllib.parse.quote_plus(match[0])))
@@ -71,7 +71,7 @@ async def on_message(message):
 
 @client.event
 async def on_guild_join(guild):
-    print(_('{} joined guild {}').format(client.user.name, guild.name))
+    print('{} joined guild {}'.format(client.user.name, guild.name))
 
 
 def get_aliexpress_affiliate_link(url):

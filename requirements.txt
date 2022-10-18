@@ -1,2 +1,2 @@
-discord.py
-python-dotenv
+discord.py~=1.7.3
+python-dotenv~=0.21.0
